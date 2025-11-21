@@ -113,7 +113,7 @@ float oaFindInterestById(const Customer customers[], int n, int id, Metrics *m) 
         mid = (lo + hi)/2;
     if(m) m->compares++;
     if(customers[mid].id == id) return customers[mid].interest;
-    else if(customers[mid].id < id) lo = mid+1;
+    else if(customers[mid].id < id) lo = mid + 1;
     else hi = mid - 1;}
     return INTEREST_NOT_FOUND;
 }
