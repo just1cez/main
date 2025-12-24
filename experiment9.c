@@ -24,6 +24,8 @@ typedef enum {
     STACK_MEM_ERR       // 内存分配失败
 } StackResult;
 
+int stackIsEmpty(const Stack* stack);
+
 // ----------------------------// 学生需实现的栈接口// ----------------------------
 // 1. 初始化栈（指定初始容量和最大容量）
 StackResult stackInit(Stack* stack, int init_capacity, int max_capacity){
