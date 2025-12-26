@@ -193,9 +193,11 @@ int jsonBracketCheckAdvanced(const char *json_str) {
         if (in_string) {
             if (escape) {
                 escape = 0;
-            } else if (ch == '\\') {
+            } 
+            else if (ch == '\\') {
                 escape = 1;
-            } else if (ch == '"') {
+            } 
+            else if (ch == '"') {
                 in_string = 0;
             }
             continue;
@@ -203,9 +205,11 @@ int jsonBracketCheckAdvanced(const char *json_str) {
 
         if (ch == '"') {
             in_string = 1;
-        } else if (isLeftBracket(ch)) {
+        } 
+        else if (isLeftBracket(ch)) {
             stackPush(&stack, ch, i);
-        } else if (isRightBracket(ch)) {
+        }
+        else if (isRightBracket(ch)) {
             StackElem elem;
             if (stackPop(&stack, &elem) != STACK_OK ||
                 !isBracketMatch(elem.bracket, ch)) {
