@@ -5,12 +5,12 @@
 
 // 歌曲节点结构体
 typedef struct Song {
-    int id;
-    char title[100];
-    char artist[50];
-    char filepath[300];
-    struct Song* prev;
-    struct Song* next;
+    int id;                 //歌曲名称
+    char title[100];        //歌曲标题
+    char artist[50];        //歌曲作者
+    char filepath[300];     //歌曲文件路径
+    struct Song* prev;      //指向前一个节点
+    struct Song* next;      //指向下一个节点
 } Song;
 
 // 播放列表管理器
