@@ -12,7 +12,7 @@ int MultiplyMatrix(int a[ROW][COL], int b[COL][ROW], int c[ROW][ROW] )
             c[i][j] = 0;
 			for(k = 0; k < COL; k++)
 			{
-				c[i][j] += a[i][k] * b[i][j];
+				c[i][j] += a[i][k] * b[k][j];
 			}
 		}
 	}
